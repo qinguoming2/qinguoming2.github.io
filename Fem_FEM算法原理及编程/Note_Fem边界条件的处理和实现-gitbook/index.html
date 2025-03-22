@@ -695,6 +695,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Note_Fem_0%E4%BD%8D%E7%A7%BB%E7%BA%A6%E6%9D%9F%E4%B8%8B%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0位移约束下的特征值问题求解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -847,6 +867,26 @@
   
   <span class="md-ellipsis">
     Matlab2Python索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Py_Python%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/Note_Py_%E6%A8%A1%E6%80%81%E6%B1%82%E8%A7%A3%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模态求解代码实现01
   </span>
   
 
@@ -1563,6 +1603,25 @@
   
 
     
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A0%E5%AF%86%E6%8F%92%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    [加密]内容加密测试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1680,6 +1739,10 @@
                   
 
 
+<hr />
+<p>comments: true  #默认不开启评论
+password:femBCs</p>
+<hr />
 <h1 id="note_fem">Note_Fem边界条件的处理和实现</h1>
 <div class="toc">
 <ul>
@@ -1820,6 +1883,7 @@ P=[50.0,4980.0,-50,20]\\
 <p><img alt="Img" src="https://simulog.site/Picgo/2025/03/yank-note-picgo-img-20250308135513.png" /></p>
 <h2 id="code-realize">Code Realize</h2>
 <p>四种方法进行Python+Numpy+Scipy编程实现,并与Example的解进行对比.</p>
+<p><encrypt>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#-------------------------------------------------------------------------------</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Name:        BcsProcess</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Purpose:     引入边界条件到[K]中,并返回解[U],[P]</span>
@@ -1970,9 +2034,9 @@ P=[50.0,4980.0,-50,20]\\
 </span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u=</span><span class="se">\n</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;extract_P=</span><span class="se">\n</span><span class="si">{</span><span class="n">extract_P</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p=</span><span class="se">\n</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">T</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span></code></pre></div>
+</span></code></pre></div></p>
 <p>计算结果:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">extract_U</span><span class="o">=</span>
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">extract_U</span><span class="o">=</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">[</span><span class="w">  </span><span class="m">0</span>.<span class="w">       </span><span class="m">0</span>.<span class="w">     </span>-16.5667<span class="w">  </span>-0.248<span class="w"> </span><span class="o">]</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">extract_P</span><span class="o">=</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">[</span><span class="w">  </span><span class="m">50</span>.<span class="w"> </span><span class="m">4980</span>.<span class="w">  </span>-50.<span class="w">   </span><span class="m">20</span>.<span class="o">]</span>
@@ -2001,6 +2065,7 @@ P=[50.0,4980.0,-50,20]\\
 </span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="nv">p</span><span class="o">=</span>
 </span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="o">[[</span><span class="w">  </span><span class="m">50</span>.<span class="w"> </span><span class="m">4980</span>.<span class="w">  </span>-50.<span class="w">   </span><span class="m">20</span>.<span class="o">]]</span>
 </span></code></pre></div>
+</encrypt></p>
 <h2 id="_1">总结</h2>
 <p>列举了四种直接节点位移边界条件的处理办法,并编程实现,求解案例.对比结果发现:<strong>相比Method3存在数值误差,其他三个都更加精确.</strong></p>
 <p><strong>如果需要处理多点耦合边界条件,则有罚函数法,拉格朗日乘子法等</strong>.</p>
@@ -2017,59 +2082,6 @@ P=[50.0,4980.0,-50,20]\\
 
 
 <!-- docs/overrides/partials/commets.html -->
-
-  <h2 id="__comments">Comments</h2>
-  <!-- Insert generated snippet here -->
-  <script src="https://giscus.app/client.js"
-            data-repo="qinguoming2/qinguoming2.github.io"
-            data-repo-id="R_kgDOOJ0T3A"
-            data-category="Announcements"
-            data-category-id="DIC_kwDOOJ0T3M4CoNwm"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="preferred_color_scheme"
-            data-lang="zh-CN"
-            crossorigin="anonymous"
-  async>
-</script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
                 
               </article>
