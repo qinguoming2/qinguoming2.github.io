@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../Note_Py_%E6%A8%A1%E6%80%81%E6%B1%82%E8%A7%A3%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B001/">
+      
+      
+        <link rel="next" href="../../CNC_Cpp%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Note_Py_记C3D4单元的debbug过程 - Qinguoming Notes</title>
+        <title>C3D4单元Debbug过程 - Qinguoming Notes</title>
       
     
     
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Note_Py_记C3D4单元的debbug过程
+              C3D4单元Debbug过程
             
           </span>
         </div>
@@ -624,17 +628,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -647,7 +653,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Python数值计算
@@ -789,6 +795,36 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    C3D4单元Debbug过程
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1554,7 +1590,7 @@
 
 
 <h1 id="note_py_c3d4debbug">Note_Py_记C3D4单元的debbug过程</h1>
-<p>20230326使用python编程：</p>
+<p>20230326使用python编程:</p>
 <ol>
 <li>
 <p>完成C3D4的类实现</p>
@@ -1566,13 +1602,13 @@
 <p>完成pyvista+tkinter的小型后处理</p>
 </li>
 </ol>
-<p>使用悬臂梁模型和abaqus对比结果，发现对不上，自己的后处理显示很小。</p>
+<p>使用悬臂梁模型和abaqus对比结果,发现对不上,自己的后处理显示很小.</p>
 <p>abaqus节点力1000N</p>
 <p><img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328112443.png" /></p>
 <p><img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328112754.png" /></p>
-<p>自编结果：  <br />
+<p>自编结果:  <br />
 <img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328112731.png" /></p>
-<p>后来提取其中一个单元的刚度矩阵发现也对不上。</p>
+<p>后来提取其中一个单元的刚度矩阵发现也对不上.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># -------------可视化结果-</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># ic(element_list[267].label)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># ic(element_list[267].Ke)</span>
@@ -1585,11 +1621,11 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># diff=e268_stiff-element_list[267].Ke</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># imShowMat(diff,&quot;diff&quot;)</span>
 </span></code></pre></div>
-<p>使用RAO版本的书中的四面体单元例子：</p>
+<p>使用RAO版本的书中的四面体单元例子:</p>
 <p><img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328113032.png" /></p>
 <p><img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328113101.png" /></p>
 <p><img alt="Img" src="../FILES/Note_Py_%E8%AE%B0C3D4%E5%8D%95%E5%85%83%E7%9A%84debbug%E8%BF%87%E7%A8%8B.md/img-20250328113115.png" /></p>
-<p>然后在验证自己的C3D4单元：</p>
+<p>然后在验证自己的C3D4单元:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#%%</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">EF2D.Elements</span> <span class="kn">import</span> <span class="n">C3D4</span>
@@ -1649,7 +1685,9 @@
 </span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="c1">#        [0.    , 0.    , 0.    , 0.    , 0.7962, 0.    ],</span>
 </span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="c1">#        [0.    , 0.    , 0.    , 0.    , 0.    , 0.7962]])</span>
 </span></code></pre></div>
-<p>最后破案了，弹性矩阵(2,2)忘记赋值了！！！！！！！！！！！！</p>
+<p>最后破案了,弹性矩阵(2,2)忘记赋值了!!!!!!!!!!!!</p>
+<p>后续:修改了之后,还是错误,最后通过提取abaqus刚度矩阵进行对比,发现是刚度矩阵不对.</p>
+<p>解决方案:重新推导单元刚度矩阵,并对博文进行修改了</p>
 
 
 
